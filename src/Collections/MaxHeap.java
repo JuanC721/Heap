@@ -36,10 +36,6 @@ public class MaxHeap <T extends Comparable<T>>{
 				return heap.length;
 			}
 			
-			public void heapify(int i) {
-				
-			}
-			
 			public int left(int i) {	
 				return 2*i;
 			}
@@ -50,6 +46,14 @@ public class MaxHeap <T extends Comparable<T>>{
 			
 			public int parent(int i) {
 				return i/2;
+			}
+
+			public void heapify(int root) {
+				int l = left(root);
+				int r = right(root);
+				if(l < heapLenght() && heap[l].compareTo(heap[root]) > 0) {
+					
+				}
 			}
 	
 	
